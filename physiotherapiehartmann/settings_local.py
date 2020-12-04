@@ -1,3 +1,0 @@
-ALLOWED_HOSTS = []
-DEBUG = True
-SECRET_KEY = '@l!vtqa12c2nuew=%aq)tt40-4ak1hqg7!h)nm9=y&*@2usc)l'
