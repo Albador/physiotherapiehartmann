@@ -1,3 +1,16 @@
-ALLOWED_HOSTS = ['localhost']
+# Copy this file to settings_local.py and adjust for your environment.
+# settings_local.py is gitignored and must not be committed.
+
+SECRET_KEY = 'django-insecure-replace-this-with-a-long-random-value-before-going-live'
 DEBUG = True
-SECRET_KEY = '@l!vtqa12c2nuew=%aq)tt40-4ak1hqg7!h)nm9=y&*@2usc)l'
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+# Production (DEBUG = False) extras:
+# ALLOWED_HOSTS = ['physiotherapie-hartmann.net', 'www.physiotherapie-hartmann.net']
+# CSRF_TRUSTED_ORIGINS = ['https://physiotherapie-hartmann.net', 'https://www.physiotherapie-hartmann.net']
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
