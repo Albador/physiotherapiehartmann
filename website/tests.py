@@ -28,3 +28,12 @@ class WebsitePageTests(TestCase):
         response = self.client.get(reverse('website:home'))
         self.assertContains(response, '/static/website/css/style.css')
         self.assertContains(response, '/static/website/pictures/daniela.jpg')
+
+    def test_team_lists_members(self):
+        response = self.client.get(reverse('website:team'))
+        for name in ('Daniela Hartmann', 'Ulrike Strobelt', 'Elke Lindworsky'):
+            with self.subTest(name=name):
+                self.assertContains(response, name)
+        self.assertContains(response, 'Manuelle Lymphdrainage')
+        self.assertContains(response, 'PNF Neuro')
+        self.assertContains(response, 'Touch for Health')
